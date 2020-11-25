@@ -23,7 +23,7 @@ $pdo->exec($insert_to_login);
 
 // // 跳至會員頁面並顯示資訊
 if($insert_to_login){
-header("location:member_page.php?mess=會員註冊成功!!");
+header("location:login.php?mess=會員註冊成功!!請重新登入");
 }else{
   header("location:login.php?mess=會員註冊失敗!!請重新登入");
 }

@@ -10,7 +10,7 @@
   <h2>發票對獎系統</h2>
   <h3>會員登入</h3>
   <form action="login_checked.php" method="post">
-    <label for="acc">帳號:</label><input type="text" name="acc" id="acc" value="<?php include_once "../PDO.php";echo$_SESSION['acc'];?>">
+    <label for="acc">帳號:</label><input type="text" name="acc" id="acc" value="<?php include_once "../PDO.php";if(isset($_SESSION['acc'])){echo$_SESSION['acc'];}?>">
     <label for="pass">密碼:</label><input type="text" name="pass" id="pass">
     <a href="">忘記密碼?</a>
     <a href="add_member.php">立即註冊</a>

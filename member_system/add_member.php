@@ -12,7 +12,7 @@
     <label for="pass">密碼</label><input type="text" name="pass" id="pass">
     <label for="email">電子信箱</label><input type="text" name="email" id="email">
     <label for="name">用戶名稱</label><input type="text" name="name" id="name">
-    性別<input type="radio" name="gender" value="先生" checked>先生
+    性別<input type="radio" name="gender" value="先生" checked>男士
     <input type="radio" name="gender" value="女士">女士
     <input type="submit" value="註冊">
     <input type="reset" value="重置">

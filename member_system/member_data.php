@@ -6,21 +6,17 @@
   <title>member_data</title>
 </head>
 <body>
-<?php
-include_once "../PDO.php";
-echo $_SESSION['id'];
-echo "<br>";
-echo $_SESSION['acc'];
-echo "<br>";
-echo $_SESSION['pass'];
-echo "<br>";
-echo $_SESSION['email'];
-echo "<br>";
-echo $_SESSION['name'];
-echo "<br>";
-echo $_SESSION['gender'];
-echo "<br>";
-?>
+  <h2>會員資料編輯</h2>
+  <form action="update.php" method="post">
+    <label for="acc">帳號</label><input readonly type="text" name="acc" id="acc" value="<?php include_once "../PDO.php";echo $_SESSION['acc'];?>">
+    密碼<a href="pass_change.php">修改</a>
+    <label for="email">電子信箱</label><input type="text" name="email" id="email" value="<?php echo $_SESSION['email'];?>">
+    <label for="name">用戶名稱</label><input type="text" name="name" id="name" value="<?php echo $_SESSION['name'];?>">
+    性別
+    <input readonly type="text" name="gender" value="<?php if($_SESSION['gender']=='男士'){echo "男士";}else{echo "女士";}?>">
+    <input type="submit" value="確認修改">
+    <a href="delete_confirm.php">刪除會員資料</a>
+  </form>
 <a href="member_page.php">上一頁</a>
 </body>
 </html>
