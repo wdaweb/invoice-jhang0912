@@ -27,16 +27,16 @@ if(!empty($check_acc)){
     $_SESSION['name']=$name;
     $_SESSION['gender']=$gender;
     $_SESSION['session']=$session;
-    header("location:member_page.php?mess=登入成功");
+    to("member_page.php?mess=登入成功");
   }else{
 
 // 密碼錯誤就跳回登入頁面
-    header("location:login.php");
+    to("login.php");
   }
 }else{
   
 // 帳號不存在就跳回登入頁面
-  header("location:login.php");
+to("login.php");
 }
 
 ?>
