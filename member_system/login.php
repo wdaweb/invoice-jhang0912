@@ -12,6 +12,7 @@
   <form action="login_checked.php" method="post">
     <label for="acc">帳號:</label><input type="text" name="acc" id="acc" value="<?php include_once "../PDO.php";if(isset($_SESSION['acc'])){echo$_SESSION['acc'];}?>">
     <label for="pass">密碼:</label><input type="text" name="pass" id="pass">
+    <input type="checkbox" name="session" value="true">記住用戶名稱
     <a href="">忘記密碼?</a>
     <a href="add_member.php">立即註冊</a>
     <input type="submit" value="登入">

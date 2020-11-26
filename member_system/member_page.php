@@ -10,7 +10,7 @@
   <h4><?php if(isset($_GET['mess'])){echo $_GET['mess'];}?></h4>
   <a href="member_data.php">我的資料</a>
   <a href="../invoice_system/invoice_list.php">我的發票</a>
-  <a href="login.php">登出</a>
+  <a href="logout.php">登出</a>
 <?php
 include_once "../PDO.php";
 echo "會員ID:",$_SESSION['id'];

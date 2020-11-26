@@ -3,6 +3,7 @@ include_once "../PDO.php";
 // 將login的傳值放進變數
 $acc=$_POST['acc'];
 $pass=$_POST['pass'];
+$session=$_POST['session'];
 
 // 執行SQL搜尋語法並判斷帳號是否存在資料庫
 $check_acc=$pdo->query("SELECT * FROM `member_login` WHERE `member_login`.`acc`='$acc'")->fetchAll(PDO::FETCH_ASSOC);
@@ -25,6 +26,7 @@ if(!empty($check_acc)){
     $_SESSION['email']=$email;
     $_SESSION['name']=$name;
     $_SESSION['gender']=$gender;
+    $_SESSION['session']=$session;
     header("location:member_page.php?mess=登入成功");
   }else{
 
