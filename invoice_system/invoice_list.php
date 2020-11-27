@@ -8,7 +8,7 @@
 <body>
   <h2>發票管理</h2>
   <a href="../member_system/member_page.php">會員中心</a>
-  <div><a href="add_invoice.php">發票登入</a></div>
+  <div><a href="add_invoice.php">發票儲存</a></div>
   <div><a href=".php">我的發票</a></div>
   <div><a href=".php">發票對獎</a></div>
   <div><a href=".php">消費統計</a></div>
