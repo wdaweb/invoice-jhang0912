@@ -27,7 +27,28 @@
     <tr><td>備註</td><td><?=$search_invoice[8]?></td></tr>
   </table>
   <a href="delete_action.php?id=<?=$search_invoice[0]?>">刪除</a>
-  <a href="my_invoice.php">取消</a>
-
+  <?php
+  switch($search_invoice[3]){
+      case '1':
+        echo "<a href='period/1-2.php'>取消</a>";
+      break;
+      case '2':
+        echo "<a href='period/3-4.php'>取消</a>";
+      break;
+      case '3':
+        echo "<a href='period/5-6.php'>取消</a>";
+      break;
+      case '4':
+        echo "<a href='period/7-8.php'>取消</a>";
+      break;
+      case '5':
+        echo "<a href='period/9-10.php'>取消</a>";
+      break;
+      case '6':
+        echo "<a href='period/11-12.php'>取消</a>";
+      break;
+    }
+  ?>
+  <a href="my_invoice.php">我的發票</a>
 </body>
 </html
