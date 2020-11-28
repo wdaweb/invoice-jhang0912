@@ -10,6 +10,23 @@
   <form action="add_action.php" method="post">
     <label for="date">日期:</label><input type="date" name="date" id="date">
     <div>
+      期數:
+      <select name="period" >
+      <option value="1">1~2月</option>
+      <option value="2">3~4月</option>
+      <option value="3">5~6月</option>
+      <option value="4">7~8月</option>
+      <option value="5">9~10月</option>
+      <option value="6">11~12月</option>
+      </select>
+    </div>
+    <div>
+      發票號碼:
+      <input type="text" style="width:20px;" name="heading"> -
+      <input type="text" style="width:80px;" name="number">
+    </div>
+    <div><label for="amount">金額:</label><input type="text" name="amount" id="amount"></div>
+    <div>
       分類:
       <select name="sort">
       <option value="食品酒水">食品酒水</option>
@@ -24,13 +41,7 @@
       <option value="其他雜項">其他雜項</option>
       </select>
     </div>
-    <div><label for="amount">金額:</label><input type="text" name="amount" id="amount"></div>
     <div>備註:<textarea name="note" cols="30" rows="3"></textarea></div>
-    <div>
-      發票號碼:
-      <input type="text" style="width:20px;" name="heading"> -
-      <input type="text" style="width:80px;" name="number">
-    </div>
     <input type="submit" value="儲存">
     <input type="reset" value="重置">
   </form>
