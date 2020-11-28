@@ -45,6 +45,6 @@
     <input type="submit" value="儲存">
     <input type="reset" value="重置">
   </form>
-  <a href="invoice_list.php">上一頁</a>
+  <a href="invoice_board.php">上一頁</a>
 </body>
 </html>
