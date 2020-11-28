@@ -30,7 +30,6 @@
     // echo"<pre>";
     // print_r($search_invoice);
     // echo"</pre>";
-    count($search_invoice); 
 
     foreach($search_invoice as $key=>$value){
       // echo"<pre>";
@@ -43,7 +42,7 @@
       echo"<td>$value[7]</td>";
       echo"<td>$value[8]</td>";
       echo"<td><a href='edit_invoice.php?id=$value[0]'>編輯</a></td>";
-      echo"<td><a href='delete_invoice.php'>刪除</a></td>";
+      echo"<td><a href='delete_confirm.php?id=$value[0]'>刪除</a></td>";
       echo "</tr>";
     }
     ?>

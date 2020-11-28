@@ -1,6 +1,7 @@
 <?php
 include_once "../PDO.php";
 $pdo=$pdo->query("SELECT * FROM `invoice` WHERE `id`='{$_GET['id']}'")->fetchAll();
+setcookie("invoice_id","{$pdo[0][0]}","time()+3600");
 // echo "<pre>";
 // print_r($pdo);
 // echo "</pre>";
@@ -14,7 +15,8 @@ $pdo=$pdo->query("SELECT * FROM `invoice` WHERE `id`='{$_GET['id']}'")->fetchAll
 </head>
 <body>
   <H2>發票編輯</H2>
-  <form action=".php" method="post">
+  <form action="update_invoice.php" method="post">
+    
     <label for="date">日期:</label><input type="date" name="date" id="date" value="<?php echo $pdo[0][2]?>">
     <div>
       期數:
@@ -36,19 +38,19 @@ $pdo=$pdo->query("SELECT * FROM `invoice` WHERE `id`='{$_GET['id']}'")->fetchAll
     <div>
       分類:
       <select name="sort">
-      <option value="食品酒水" <?php if($pdo[0][3]=='食品酒水'){echo "selected";}?>>食品酒水</option>
-      <option value="居家物業" <?php if($pdo[0][3]=='居家物業'){echo "selected";}?>>居家物業</option>
-      <option value="行車交通" <?php if($pdo[0][3]=='行車交通'){echo "selected";}?>>行車交通</option>
-      <option value="交流通訊" <?php if($pdo[0][3]=='交流通訊'){echo "selected";}?>>交流通訊</option>
-      <option value="休閒娛樂" <?php if($pdo[0][3]=='休閒娛樂'){echo "selected";}?>>休閒娛樂</option>
-      <option value="進修學習" <?php if($pdo[0][3]=='進修學習'){echo "selected";}?>>進修學習</option>
-      <option value="人情往來" <?php if($pdo[0][3]=='人情往來'){echo "selected";}?>>人情往來</option>
-      <option value="醫療保健" <?php if($pdo[0][3]=='醫療保健'){echo "selected";}?>>醫療保健</option>
-      <option value="金融保險" <?php if($pdo[0][3]=='金融保險'){echo "selected";}?>>金融保險</option>
-      <option value="其他雜項" <?php if($pdo[0][3]=='其他雜項'){echo "selected";}?>>其他雜項</option>
+      <option value="食品酒水" <?php if($pdo[0][7]=='食品酒水'){echo "selected";}?>>食品酒水</option>
+      <option value="居家物業" <?php if($pdo[0][7]=='居家物業'){echo "selected";}?>>居家物業</option>
+      <option value="行車交通" <?php if($pdo[0][7]=='行車交通'){echo "selected";}?>>行車交通</option>
+      <option value="交流通訊" <?php if($pdo[0][7]=='交流通訊'){echo "selected";}?>>交流通訊</option>
+      <option value="休閒娛樂" <?php if($pdo[0][7]=='休閒娛樂'){echo "selected";}?>>休閒娛樂</option>
+      <option value="進修學習" <?php if($pdo[0][7]=='進修學習'){echo "selected";}?>>進修學習</option>
+      <option value="人情往來" <?php if($pdo[0][7]=='人情往來'){echo "selected";}?>>人情往來</option>
+      <option value="醫療保健" <?php if($pdo[0][7]=='醫療保健'){echo "selected";}?>>醫療保健</option>
+      <option value="金融保險" <?php if($pdo[0][7]=='金融保險'){echo "selected";}?>>金融保險</option>
+      <option value="其他雜項" <?php if($pdo[0][7]=='其他雜項'){echo "selected";}?>>其他雜項</option>
       </select>
     </div>
-    <div>備註:<textarea name="note" cols="30" rows="3" ><?php echo $pdo[0][8]?></textarea></div>
+    <div>備註:<textarea name="note" cols="20" rows="3" ><?php echo $pdo[0][8]?></textarea></div>
     <input type="submit" value="儲存">
     <a href="my_invoice.php">取消</a>
   </form>

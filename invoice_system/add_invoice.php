@@ -46,5 +46,6 @@
     <input type="reset" value="重置">
   </form>
   <a href="invoice_board.php">上一頁</a>
+  <a href="my_invoice.php">我的發票</a>
 </body>
 </html>
