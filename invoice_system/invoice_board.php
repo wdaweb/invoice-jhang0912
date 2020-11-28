@@ -12,6 +12,6 @@
   <div><a href="my_invoice.php">我的發票</a></div>
   <div><a href=".php">發票對獎</a></div>
   <div><a href=".php">消費統計</a></div>
-  <div><a href=".php">開獎號碼</a></div>
+  <div><a href="award/award.php">開獎號碼</a></div>
 </body>
 </html>

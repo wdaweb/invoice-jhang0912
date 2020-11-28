@@ -10,7 +10,7 @@
   <form action="add_action.php" method="post">
     <label for="date">日期:</label><input type="date" name="date" id="date">
     <div>
-      期數:
+      期別:
       <select name="period" >
       <option value="1">1~2月</option>
       <option value="2">3~4月</option>
