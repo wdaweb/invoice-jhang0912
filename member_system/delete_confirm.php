@@ -6,7 +6,7 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>確認刪除會員資料</h2>
+  <h2>刪除會員資料</h2>
   <h4>請重新輸入帳號密碼</h4>
   <form action="delete.php" method="POST">
   帳號<input type="text" name="acc">
