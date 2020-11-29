@@ -7,7 +7,7 @@ $email=$_POST['email'];
 $name=$_POST['name'];
 $gender=$_POST['gender'];
 
-// 設置cookie與session
+// 設置session
 $member_data=$pdo->query("SELECT `member_login`.`member_id` FROM `member_login` WHERE `member_login`.`acc`='$acc' && `member_login`.`pass`='$pass'")->fetch(PDO::FETCH_ASSOC);
 $id=$member_data['id'];
 $_SESSION['id']=$id;
