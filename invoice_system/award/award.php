@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+  <h2>開獎號碼</h2>
   <a href="add_number.php">開獎號碼登入</a>
   <a href="number_search.php">開獎號碼搜尋</a>
   <a href="https://www.etax.nat.gov.tw/etw-main/web/ETW183W1/" target="blank">財政部稅務入口網</a>
