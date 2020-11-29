@@ -66,6 +66,8 @@
           echo "<td>$value[4]</td></tr>";
           echo "<tr>";
         }
+      echo "<td>操作</td><td><a href='edit_award.php?year={$search[0][1]}&period={$search[0][2]}'>編輯</a></td></tr>";
+
       }else{
         to("not_found.php");
       }
@@ -80,9 +82,6 @@
         $search_six2=$pdo->query("SELECT `number` FROM `award_numbers` WHERE `year`='{$max_year[0]}' &&   `period`='{$max_period[0]}' && `category`='4'")->fetchAll();
     // 抓出增開六獎有幾組
         $count_six2=$pdo->query("SELECT COUNT(`award_numbers`.`category`) FROM `award_numbers` WHERE   `year`='{$max_year[0]}' && `period`='{$max_period[0]}' && `category`='4'")->fetch();      
-        // echo "<pre>";
-        // print_r($latest_award);
-        // echo "</pre>";
         $month=[
           '1'=>'1~2月',
           '2'=>'3~4月',
@@ -100,19 +99,20 @@
         echo "<tr><td>".$latest_award[3][4]."</td></tr>";
         echo "<tr><td>".$latest_award[4][4]."</td></tr>";
         echo "<tr><td>同期統一發票收執聯8位數號碼與頭獎號碼相同者獎金20萬元</td></tr>";
-        echo "<><td>二獎</td><td>同期統一發票收執聯末7 位數號碼與頭獎中獎號碼末7 位相同者各得獎金4萬元</td></  tr>";
-        echo "<><td>三獎</td><td>同期統一發票收執聯末6 位數號碼與頭獎中獎號碼末6 位相同者各得獎金1萬元</td></  tr>";
-        echo "<><td>四獎</td><td>同期統一發票收執聯末5 位數號碼與頭獎中獎號碼末5 位相同者各得獎金4千元</td></  tr>";
-        echo "<><td>五獎</td><td>同期統一發票收執聯末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金1千元</td></  tr>";
-        echo "<><td>六獎</td><td>同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元</td></  tr>";
+        echo "<tr><td>二獎</td><td>同期統一發票收執聯末7 位數號碼與頭獎中獎號碼末7 位相同者各得獎金4萬元</td></tr>";
+        echo "<tr><td>三獎</td><td>同期統一發票收執聯末6 位數號碼與頭獎中獎號碼末6 位相同者各得獎金1萬元</td></tr>";
+        echo "<tr><td>四獎</td><td>同期統一發票收執聯末5 位數號碼與頭獎中獎號碼末5 位相同者各得獎金4千元</td></tr>";
+        echo "<tr><td>五獎</td><td>同期統一發票收執聯末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金1千元</td></tr>";
+        echo "<tr><td>六獎</td><td>同期統一發票收執聯末3 位數號碼與 頭獎中獎號碼末3 位相同者各得獎金2百元</td></tr>";
         echo "<tr><td rowspan='{$count_six2[0]}'>增開六獎</td>";
         foreach($search_six2 as $key=>$value){
         echo "<td>$value[0]</td></tr>";
         echo "<tr>";
         }
+        echo "<td>操作</td><td><a href='edit_award.php?year={$latest_award[0][1]}&period={$latest_award[0][2]}'>編輯</a></td></tr>";
+        
       }
       ?>
-      </tr>
   </table>
   <a href="award.php">上一頁</a>
 </body>
