@@ -18,18 +18,26 @@
     <input type="submit" value="搜尋">
   </form>
   <div>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=1&month=1~2月">1~2月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=2&month=3~4月">3~4月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=3&month=5~6月">5~6月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=4&month=7~8月">7~8月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=5&month=9~10月">9~10月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=6&month=11~12月">11~12月</a>
+    <?php
+    if(isset($_POST['year'])){
+      $year=$_POST['year'];
+    }elseif(isset($_COOKIE['year'])){
+      $year=$_COOKIE['year'];
+      echo $year;
+    }else{}
+      ?>
+    <a href="period.php?year=<?=$year?>&period=1&month=1~2月">1~2月</a>
+    <a href="period.php?year=<?=$year?>&period=2&month=3~4月">3~4月</a>
+    <a href="period.php?year=<?=$year?>&period=3&month=5~6月">5~6月</a>
+    <a href="period.php?year=<?=$year?>&period=4&month=7~8月">7~8月</a>
+    <a href="period.php?year=<?=$year?>&period=5&month=9~10月">9~10月</a>
+    <a href="period.php?year=<?=$year?>&period=6&month=11~12月">11~12月</a>
     <a href="invoice_board.php">上一頁</a>
   </div>
   <?php
   include_once "../PDO.php";
   if(!empty($_POST['year'])){
-    setcookie("year","{$_POST['year']}",time()+1800);
+    setcookie("year","{$_POST['year']}",time()+18000);
     $invoice=$pdo->query("SELECT * FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%' ORDER BY `date` DESC")->fetchALL();
     $count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%'")->fetch();
     $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%'")->fetch();
@@ -90,7 +98,7 @@
       echo "</tr>";
     }
   }else{
-    echo "找不到資料";
+    
   }
   ?>
   </table>

@@ -19,6 +19,7 @@ $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE
 </head>
 <body>
   <h3><?=$_COOKIE['year'].'年'.$_GET['month']?></h3>
+  <a href="Reward.php?period=<?=$_GET['period']?>">對獎</a>
   <h3>當期發票張數:<?=$count_invoice[0]?>張</h3>
   <h3>消費總金額:$<?=$amount_invoice[0]?></h3>
   <h3>中獎金額:</h3>

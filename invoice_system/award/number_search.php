@@ -50,8 +50,7 @@
       <tr><td>同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元</td></tr>
       <tr><td rowspan="2">特獎</td><td><?=$search[1][4]?></td></tr>
       <tr><td>同期統一發票收執聯8位數號碼與特獎號碼相同者獎金200萬元</td></tr>
-      <tr><td rowspan="5">頭獎</td><td><?=$search[1][4]?></td></tr>
-      <tr><td><?=$search[2][4]?></td></tr>
+      <tr><td rowspan="4">頭獎</td><td><?=$search[2][4]?></td></tr>
       <tr><td><?=$search[3][4]?></td></tr>
       <tr><td><?=$search[4][4]?></td></tr>
       <tr><td>同期統一發票收執聯8位數號碼與頭獎號碼相同者獎金20萬元</td></tr>
