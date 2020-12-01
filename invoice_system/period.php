@@ -18,18 +18,17 @@ $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE
   </style>
 </head>
 <body>
-  <h3><?=$_COOKIE['year'].'年'?></h3>
-  <h3>01~02月</h3>
+  <h3><?=$_COOKIE['year'].'年'.$_GET['month']?></h3>
   <h3>當期發票張數:<?=$count_invoice[0]?>張</h3>
   <h3>消費總金額:$<?=$amount_invoice[0]?></h3>
   <h3>中獎金額:</h3>
   <div>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=1">1~2月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=2">3~4月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=3">5~6月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=4">7~8月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=5">9~10月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=6">11~12月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=1&period=1&month=1~2月">1~2月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=2&period=2&month=3~4月">3~4月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=3&period=3&month=5~6月">5~6月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=4&period=4&month=7~8月">7~8月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=5&period=5&month=9~10月">9~10月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=6&period=6&month=11~12月">11~12月</a>
   </div>
   <table cellpadding="5" cellspacing="0">
     <tr>
@@ -48,8 +47,8 @@ $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE
       echo"<td>$value[6]</td>";
       echo"<td>$value[7]</td>";
       echo"<td>$value[8]</td>";
-      echo"<td><a href='../edit_invoice.php?id=$value[0]'>編輯</a></td>";
-      echo"<td><a href='../delete_confirm.php?id=$value[0]'>刪除</a></td>";
+      echo"<td><a href='edit_invoice.php?id=$value[0]'>編輯</a></td>";
+      echo"<td><a href='delete_confirm.php?id=$value[0]'>刪除</a></td>";
       echo "</tr>";
     }
     ?>

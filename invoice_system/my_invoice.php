@@ -18,12 +18,12 @@
     <input type="submit" value="搜尋">
   </form>
   <div>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=1">1~2月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=2">3~4月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=3">5~6月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=4">7~8月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=5">9~10月</a>
-    <a href="period.php?year=<?=$_COOKIE['year']?>&period=6">11~12月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=1&month=1~2月">1~2月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=2&month=3~4月">3~4月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=3&month=5~6月">5~6月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=4&month=7~8月">7~8月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=5&month=9~10月">9~10月</a>
+    <a href="period.php?year=<?=$_COOKIE['year']?>&period=6&month=11~12月">11~12月</a>
     <a href="invoice_board.php">上一頁</a>
   </div>
   <?php

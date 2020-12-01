@@ -55,22 +55,22 @@ setcookie("invoice_id","{$pdo[0][0]}","time()+3600");
     <?php
     switch($pdo[0][3]){
       case '1':
-        echo "<a href='period/1-2.php'>取消</a>";
+        echo "<a href='period.php?period=1&period=1&month=1~2月'>取消</a>";
       break;
       case '2':
-        echo "<a href='period/3-4.php'>取消</a>";
+        echo "<a href='period.php?period=2&period=2&month=3~4月'>取消</a>";
       break;
       case '3':
-        echo "<a href='period/5-6.php'>取消</a>";
+        echo "<a href='period.php?period=3&period=3&month=5~6月'>取消</a>";
       break;
       case '4':
-        echo "<a href='period/7-8.php'>取消</a>";
+        echo "<a href='period.php?period=4&period=4&month=7~8月'>取消</a>";
       break;
       case '5':
-        echo "<a href='period/9-10.php'>取消</a>";
+        echo "<a href='period.php?period=5&period=5&month=9~10月'>取消</a>";
       break;
       case '6':
-        echo "<a href='period/11-12.php'>取消</a>";
+        echo "<a href='period.php?period=6&period=6&month=11~12月'>取消</a>";
       break;
     }
     ?>
