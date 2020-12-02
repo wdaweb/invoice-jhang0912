@@ -8,7 +8,7 @@ $award_number=$pdo->query("SELECT `category`,`number` FROM `award_numbers` WHERE
 // echo "<pre>";
 // print_r($award_number);
 // echo "</pre>";
-
+if(!empty($award_number) && !empty($period_invoice)){
 // 對獎
 foreach($period_invoice as $key=>$value){
   // echo "<pre>";
@@ -87,5 +87,8 @@ foreach($period_invoice as $key=>$value){
   }else{}
 
 
+}
+}else{
+  echo"非常抱歉~不是尚未開獎就是開獎號碼未登入";
 }
 ?>
