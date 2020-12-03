@@ -1,0 +1,35 @@
+*{
+  text-align: center;
+}
+/* 標題區 */
+#header .left
+{
+  background-color: rgb(53, 85, 138);
+  height: 5.5rem;
+}
+#header .right
+{
+  background-color: red;
+  height: 5.5rem;
+}
+#header .bottom
+{
+  background-color: lightskyblue;
+}
+/* 左方功能區 */
+#left
+{
+  background-color: mediumturquoise;
+  height: 50rem;
+}
+#left .top1
+{
+  background-color: lightgreen;
+  height: 4rem;
+}
+.top2 > div
+{
+  background-color: lightcyan;
+  height: 4rem;
+  margin-top: 0.3rem;
+}
