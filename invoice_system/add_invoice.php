@@ -8,10 +8,10 @@
 <body>
   <h2>發票儲存</h2>
   <form action="add_action.php" method="post">
-    <label for="date">日期:</label><input type="date" name="date" id="date">
+    <label for="date">日期:</label><input type="date" name="date" id="date" required>
     <div>
       期別:
-      <select name="period" >
+      <select name="period" required>
       <option value="1">1~2月</option>
       <option value="2">3~4月</option>
       <option value="3">5~6月</option>
@@ -22,10 +22,10 @@
     </div>
     <div>
       發票號碼:
-      <input type="text" style="width:20px;" name="heading"> -
-      <input type="text" style="width:80px;" name="number">
+      <input type="text" style="width:20px;" name="heading" pattern="[A-Z]{2,2}" required> -
+      <input type="text" style="width:80px;" name="number" pattern="[0-9]{8,8}" required>
     </div>
-    <div><label for="amount">金額:</label><input type="text" name="amount" id="amount"></div>
+    <div><label for="amount">金額:</label><input type="number" name="amount" id="amount" min="1" max="99999999" required></div>
     <div>
       分類:
       <select name="sort">
@@ -43,7 +43,7 @@
     </div>
     <div>備註:<textarea name="note" cols="30" rows="3"></textarea></div>
     <input type="submit" value="儲存">
-    <input type="reset" value="重置">
+    <input type="reset" value="清空">
   </form>
   <a href="invoice_board.php">上一頁</a>
   <a href="my_invoice.php">我的發票</a>

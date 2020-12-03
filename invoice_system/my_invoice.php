@@ -14,7 +14,7 @@
 <body>
   <h2>我的發票</h2>
   <form action="my_invoice.php" method="post">
-    年份:<input type="text" name="year">
+    年份:<input type="text" name="year" pattern="[1982-2020]{4,4}" required>
     <input type="submit" value="搜尋">
   </form>
   <div>
@@ -38,10 +38,10 @@
   include_once "../PDO.php";
   if(!empty($_POST['year'])){
     setcookie("year","{$_POST['year']}",time()+18000);
-    $invoice=$pdo->query("SELECT * FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%' ORDER BY `date` DESC")->fetchALL();
-    $count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%'")->fetch();
-    $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%'")->fetch();
-    $year=$pdo->query("SELECT YEAR(`date`) FROM `invoice` WHERE `date` LIKE '{$_POST['year']}%'")->fetch();
+    $invoice=$pdo->query("SELECT * FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_POST['year']}%' ORDER BY `date` DESC")->fetchALL();
+    $count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_POST['year']}%'")->fetch();
+    $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_POST['year']}%'")->fetch();
+    $year=$pdo->query("SELECT YEAR(`date`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_POST['year']}%'")->fetch();
   ?>
   <h3><?=$_POST['year'].'年'?></h3>
   <h3>發票張數:<?=$count_invoice[0]?>張</h3>
@@ -68,10 +68,10 @@
       echo "</tr>";
     }
   }elseif(!empty($_COOKIE['year'])){
-    $invoice=$pdo->query("SELECT * FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%' ORDER BY `date` DESC")->fetchALL();
-    $count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%'")->fetch();
-    $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%'")->fetch();
-    $year=$pdo->query("SELECT YEAR(`date`) FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%'")->fetch();
+    $invoice=$pdo->query("SELECT * FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%' ORDER BY `date` DESC")->fetchALL();
+    $count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%'")->fetch();
+    $amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%'")->fetch();
+    $year=$pdo->query("SELECT YEAR(`date`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%'")->fetch();
     ?>
   <h3><?=$_COOKIE['year'].'年'?></h3>
   <h3>發票張數:<?=$count_invoice[0]?>張</h3>

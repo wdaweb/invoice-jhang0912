@@ -31,12 +31,12 @@ if(!empty($check_acc)){
   }else{
 
 // 密碼錯誤就跳回登入頁面
-    to("login.php");
+header("location:login.php?login_error=帳號密碼輸入錯誤!!");
   }
 }else{
   
 // 帳號不存在就跳回登入頁面
-to("login.php");
+header("location:login.php?login_error=帳號密碼輸入錯誤!!");
 }
 
 ?>

@@ -8,7 +8,7 @@
 <body>
   <h2>開獎號碼登入</h2>
   <form action="add_action.php" method="post">
-    年份:<input type="text" name="year">
+    年份:<input type="text" style="width:50px;" name="year" pattern="[0-9]{4,4}" required>
     <div>
     期別:
       <select name="period">
@@ -26,14 +26,14 @@
       <select name="category1">
       <option value="1">特別獎</option>
       </select>
-    <div>號碼:<input type="text" name="number1"></div>
+    <div>號碼:<input type="text" style="width:80px;" pattern="[0-9]{8,8}" name="number1" required></div>
     <hr>
     <!-- 特獎 -->
     獎別:
       <select name="category2">
       <option value="2">特獎</option>
       </select>
-      <div>號碼:<input type="text" name="number2"></div>
+      <div>號碼:<input type="text" style="width:80px;" pattern="[0-9]{8,8}" name="number2" required></div>
       <hr>
       <!-- 頭獎 -->
       獎別:
@@ -41,9 +41,9 @@
         <option value="3">頭獎</option>
         </select>
     <div>號碼:
-      <input type="text" name="number3">
-      <input type="text" name="number4">
-      <input type="text" name="number5">
+      <input type="text" style="width:80px;" pattern="[0-9]{8,8}" name="number3" required>
+      <input type="text" style="width:80px;" pattern="[0-9]{8,8}" name="number4" required>
+      <input type="text" style="width:80px;" pattern="[0-9]{8,8}" name="number5" required>
     </div>
     <hr>
     <!-- 增開六獎 -->
@@ -52,12 +52,12 @@
       <option value="4">增開六獎</option>
       </select>
     <div>號碼:
-      <input type="text" name="number6">
-      <input type="text" name="number7">
-      <input type="text" name="number8">
+      <input type="text" style="width:80px;" pattern="[0-9]{3,3}" name="number6" required>
+      <input type="text" style="width:80px;" pattern="[0-9]{3,3}" name="number7">
+      <input type="text" style="width:80px;" pattern="[0-9]{3,3}" name="number8">
     </div>
     <input type="submit" value="儲存">
-    <input type="reset" value="重置">
+    <input type="reset" value="清空">
   </form>
   <a href="award.php">上一頁</a>
 </body>

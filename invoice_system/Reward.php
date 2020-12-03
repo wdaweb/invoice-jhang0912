@@ -1,7 +1,7 @@
 <?php
 include_once "../PDO.php";
-$period_invoice=$pdo->query("SELECT `id`,`number`,`note` FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetchALL();
-$award_number=$pdo->query("SELECT `category`,`number` FROM `award_numbers` WHERE `year`='{$_COOKIE['year']}' && `period`='{$_GET['period']}'")->fetchALL();
+$period_invoice=$pdo->query("SELECT `id`,`number`,`note` FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetchALL();
+$award_number=$pdo->query("SELECT `category`,`number` FROM `award_numbers` WHERE `member_id`='{$_SESSION['id']}' && `year`='{$_COOKIE['year']}' && `period`='{$_GET['period']}'")->fetchALL();
 // echo "<pre>";
 // print_r($period_invoice);
 // echo "</pre>";
@@ -89,6 +89,17 @@ foreach($period_invoice as $key=>$value){
 
 }
 }else{
-  echo"非常抱歉~不是尚未開獎就是開獎號碼未登入";
+  echo"<h4>抱歉~可能發生以下錯誤!!</h4><h4>1.未登入開獎號碼</h4><h4>2.未登入發票資料</h4>";
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="my_invoice.php">回我的發票</a>
+</body>
+</html>

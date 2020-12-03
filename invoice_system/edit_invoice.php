@@ -17,7 +17,7 @@ setcookie("invoice_id","{$pdo[0][0]}","time()+3600");
   <H2>發票編輯</H2>
   <form action="update_invoice.php" method="post">
     
-    <label for="date">日期:</label><input type="date" name="date" id="date" value="<?php echo $pdo[0][2]?>">
+    <label for="date">日期:</label><input type="date" name="date" id="date" value="<?php echo $pdo[0][2]?>" required>
     <div>
       期數:
       <select name="period">
@@ -31,10 +31,10 @@ setcookie("invoice_id","{$pdo[0][0]}","time()+3600");
     </div>
     <div>
       發票號碼:
-      <input type="text" style="width:20px;" name="heading" value="<?php echo $pdo[0][4]?>"> -
-      <input type="text" style="width:80px;" name="number" value="<?php echo $pdo[0][5]?>">
+      <input type="text" style="width:20px;" name="heading" value="<?php echo $pdo[0][4]?>" pattern="[A-Z]{2,2}" require> -
+      <input type="number" style="width:80px;" name="number" value="<?php echo $pdo[0][5]?>" pattern="[0-9]{8,8}" required>
     </div>
-    <div><label for="amount">金額:</label><input type="text" name="amount" id="amount" value="<?php echo $pdo[0][6]?>"></div>
+    <div><label for="amount">金額:</label><input type="number" name="amount" id="amount" value="<?php echo $pdo[0][6]?>" min="1" max="99999999" required></div>
     <div>
       分類:
       <select name="sort">

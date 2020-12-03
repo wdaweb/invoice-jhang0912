@@ -6,6 +6,6 @@ $pdo=$pdo->exec("DELETE FROM `member_login` WHERE `member_login`.`member_id`='{$
 session_destroy();
 header("location:login.php");
 }else{
-  header("location:member_data.php");
+  header("location:delete_confirm.php?delete=帳號密碼輸入錯誤!");
 }
 ?>

@@ -1,8 +1,8 @@
 <?php
 include_once "../PDO.php";
-$period_invoice=$pdo->query("SELECT * FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}' ORDER BY `date` DESC")->fetchALL();
-$count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetch();
-$amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetch();
+$period_invoice=$pdo->query("SELECT * FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}' ORDER BY `date` DESC")->fetchALL();
+$count_invoice=$pdo->query("SELECT COUNT(`invoice`.`id`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetch();
+$amount_invoice=$pdo->query("SELECT SUM(`invoice`.`amount`) FROM `invoice` WHERE `member_id`='{$_SESSION['id']}' && `date` LIKE '{$_COOKIE['year']}%' && `period` = '{$_GET['period']}'")->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">

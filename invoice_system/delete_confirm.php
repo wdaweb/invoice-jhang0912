@@ -49,6 +49,5 @@
     break;
   }
   ?>
-  <a href="my_invoice.php">我的發票</a>
 </body>
 </html
