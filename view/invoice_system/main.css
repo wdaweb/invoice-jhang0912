@@ -1,0 +1,142 @@
+*{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+a{
+  text-decoration:none;
+}
+/* body */
+body{
+  background-color: rgb(180, 199, 213);
+}
+/* 標題區 */
+
+/* 左icon */
+#header .left
+{
+  background-color: rgb(53, 84, 138);
+  height: 5.5rem;
+  border-bottom: 0.2rem solid rgb(245, 220, 179);
+}
+.right.col-sm-12.col-md-12.col-lg-6.d-flex.justify-content-end.align-items-center{
+  border-bottom: 0.2rem solid rgb(245, 220, 179);
+
+}
+i.fas.fa-file-invoice-dollar.pr-3{
+  font-size:4rem;
+  color: rgb(255, 255, 255);
+}
+p.title.text-white.m-0{
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+}
+
+/* 右navbar */
+#header .right
+{
+  background-color: rgb(53, 84, 138);
+  height: 5.5rem;
+}
+a.nav-link.text-white{
+  padding: 0.5rem;
+}
+i.fas.fa-user-circle{
+  font-size: 1.5rem;
+}
+
+/* 麵包削 */
+ol.breadcrumb{
+  border-radius: 0;
+  background-color: rgb(180, 199, 213);
+}
+#header a.li.text-white{
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/* 中間區 */
+section#article{
+  /* background-color: rgb(180, 199, 213); */
+  border-radius: 5px;
+  margin: 0 1.5rem;
+}
+div#left{
+  border-radius: 5px;
+  margin:0 auto;
+}
+#left
+{
+  background-color:white;
+  height: 43rem;
+  min-width: 20vw;
+}
+i.fas.fa-user.h3.m-0{
+  color: rgb(245, 220, 179);
+}
+.pl-3.h3.m-0{
+  color: rgb(245, 220, 179);
+
+}
+#left .top1
+{
+  background-color: rgb(53, 84, 138);
+  height: 4rem;
+  border-radius: 5px 5px 0 0;
+}
+.top2 > div
+{
+  height: 3rem;
+  margin-top: 0.3rem;
+}
+i.fas{
+  color: rgb(53, 84, 138);
+  
+}
+.title.h4.m-0.pl-2{
+  color: rgb(53, 84, 138);
+}
+.h4.m-0.pl-2{
+  color: rgb(125, 134, 139);
+}
+.h4.m-0.pl-2:hover{
+  color: rgb(53, 84, 138);
+}
+
+.bottom.d-flex.justify-content-center.align-items-center{
+  border-bottom: 0.05rem solid rgb(180, 199, 213);
+}
+/* 右方內容區 */
+
+#right
+{
+  background-color:white;
+  border-radius: 5px;
+  min-width: 73vw;
+  margin: 0 auto;
+}
+/* 會員主頁 */
+#right a.nav-link.active{
+  color: rgb(125, 134, 139);
+}
+#right a.nav-link.active.h3{
+  color: rgb(53, 84, 138);
+}
+/* 資料編輯 */
+.col-12.h3{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+  border-radius: 5px 5px 0 0;
+  height: 4rem;
+}
+#right th.text-center{
+  background-color: rgb(53, 84, 138);
+  color: rgb(255, 255, 255);
+}
+#right input.btn{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+}
+/* 消費統計 */
+#right a.btn{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+}
