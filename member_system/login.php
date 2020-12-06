@@ -51,12 +51,10 @@
           </div>
           <div class="form-group">
             <div class="text-secondary h3">Password</div>
-            <input type="text" class="form-control mb-4" name="pass" placeholder="請輸入密碼" required>
+            <input type="password" class="form-control mb-4" name="pass" placeholder="請輸入密碼" required>
           </div>
           <div class="form-group form-check mb-4">
-            <input type="checkbox" class="form-check-input mb-4" name="session" value="true" checked><span class="h5 text-secondary">記住用戶帳號</span>
-
-            <a href="add_member.php" class="float-right " style="text-decoration: none;">立即註冊</a>
+            <input type="checkbox" class="form-check-input mb-4" name="session" value="true" checked><span class="h5 text-secondary">記住帳號</span>
           </div>
             <input type="submit" class="w-100 btn"  value="立即登入">
         </form>

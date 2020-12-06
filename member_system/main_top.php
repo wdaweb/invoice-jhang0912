@@ -21,7 +21,7 @@
     <div class="right col-sm-12 col-md-12 col-lg-6 d-flex justify-content-end align-items-center">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link text-white pr-3">您好,fantasy@gmail.com</a>
+          <a class="nav-link text-white pr-3">您好,<?=$_SESSION['email']?></a>
         </li>
         <li class="nav-item d-flex align-items-center">
           <i class="fas fa-user-circle text-white"></i>
@@ -78,17 +78,17 @@
           <div class="h4 m-0 pl-2"><a href="../invoice_system/my_invoice.php" class="h5 p-2" style="text-decoration:none;"> 我的發票 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 發票儲存 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../invoice_system/add_invoice.php" class="h5 p-2" style="text-decoration:none;"> 發票儲存 </a></div>
         </div>
         <div class="bottom d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 消費統計 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../invoice_system/count.php" class="h5 p-2" style="text-decoration:none;"> 消費統計 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
           <i class="fas fa-medal h1 m-0"></i>
           <div class="title h4 m-0 pl-2">開獎號碼</div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 開獎號碼登入 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../invoice_system/add_number.php" class="h5 p-2" style="text-decoration:none;"> 開獎號碼登入 </a></div>
         </div>
         <div class="bottom d-flex justify-content-center align-items-center">
           <div class="h4 m-0 pl-2"><a href="https://www.etax.nat.gov.tw/etwmain/?orgId=FDC" target="blank" class="h5 p-2" style="text-decoration:none;"> 財政部稅務入口網 </a></div>

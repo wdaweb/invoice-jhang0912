@@ -1,4 +1,5 @@
 <?php
+include_once "../PDO.php";
 include_once "main_top.php";
 ?>
 <section id="right" class="col-12 col-sm-12 col-md-9 p-0">
@@ -13,7 +14,7 @@ include_once "main_top.php";
           <tr>
             <th scope="col" class="text-center">舊密碼:</th>
             <td>
-              <input type="text" name="pass" required>
+              <input type="password" name="pass" required>
             </td>
           </tr>
         </thead>
@@ -21,7 +22,7 @@ include_once "main_top.php";
           <tr>
             <th scope="row" class="text-center">新密碼:</th>
             <td>
-              <input type="text" name="new_pass" required>
+              <input type="password" name="new_pass" required>
             </td>
           </tr>
           <tr>

@@ -21,7 +21,7 @@
     <div class="right col-sm-12 col-md-12 col-lg-6 d-flex justify-content-end align-items-center">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link text-white pr-3">您好,fantasy@gmail.com</a>
+          <a class="nav-link text-white pr-3">您好,<?=$_SESSION['email']?></a>
         </li>
         <li class="nav-item d-flex align-items-center">
           <i class="fas fa-user-circle text-white"></i>
@@ -33,7 +33,7 @@
           <a class="nav-link text-white">|</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">登出</a>
+          <a class="nav-link text-white" href="logout.php">登出</a>
         </li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
     <div id="left" class="col-12 col-sm-12 col-md-2 p-0 ">
       <div class="top1 container col-12 d-flex justify-content-center align-items-center">
       <i class="fas fa-user h3 m-0"></i>
-      <div class="pl-3 h3 m-0">我的帳戶</div>
+      <div class="pl-3 h3 m-0"> <a href="../member_system/member_page.php" class="pl-3 h3 m-0" style="text-decoration: none;">我的帳戶</a></div>
       </div>
       <div class="top2 container col-12 p-0">
         <div class="d-flex justify-content-center align-items-center">
@@ -62,36 +62,36 @@
           <div class="title h4 m-0 pl-2">我的資料</div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 基本資料 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../member_system/member_data.php" class="h5 p-2" style="text-decoration:none;"> 基本資料 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 修改密碼 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../member_system/pass_change.php" class="h5 p-2" style="text-decoration:none;"> 修改密碼 </a></div>
         </div>
         <div class="bottom d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 刪除資料 </a></div>
+          <div class="h4 m-0 pl-2"><a href="../member_system/delete_confirm.php" class="h5 p-2" style="text-decoration:none;"> 刪除資料 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
           <i class="fas fa-file-invoice h1 m-0"></i>
           <div class="title h4 m-0 pl-2">發票管理</div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 我的發票 </a></div>
+          <div class="h4 m-0 pl-2"><a href="my_invoice.php" class="h5 p-2" style="text-decoration:none;"> 我的發票 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 發票儲存 </a></div>
+          <div class="h4 m-0 pl-2"><a href="add_invoice.php" class="h5 p-2" style="text-decoration:none;"> 發票儲存 </a></div>
         </div>
         <div class="bottom d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 消費統計 </a></div>
+          <div class="h4 m-0 pl-2"><a href="count.php" class="h5 p-2" style="text-decoration:none;"> 消費統計 </a></div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
           <i class="fas fa-medal h1 m-0"></i>
           <div class="title h4 m-0 pl-2">開獎號碼</div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="" class="h5 p-2" style="text-decoration:none;"> 開獎號碼登入 </a></div>
+          <div class="h4 m-0 pl-2"><a href="add_number.php" class="h5 p-2" style="text-decoration:none;"> 開獎號碼登入 </a></div>
         </div>
         <div class="bottom d-flex justify-content-center align-items-center">
-          <div class="h4 m-0 pl-2"><a href="https://www.etax.nat.gov.tw/etw-main/web/ETW183W1/" target="blank" class="h5 p-2" style="text-decoration:none;"> 財政部稅務入口網 </a></div>
+          <div class="h4 m-0 pl-2"><a href="https://www.etax.nat.gov.tw/etwmain/?orgId=FDC" target="blank" class="h5 p-2" style="text-decoration:none;"> 財政部稅務入口網 </a></div>
         </div>
       </div>
     </div>

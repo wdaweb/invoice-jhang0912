@@ -12,5 +12,5 @@ $note=$_POST['note'];
 // 寫入發票資料
 $insert_to_invoice="INSERT INTO `invoice`(`member_id`, `date`, `period`, `heading`, `number`, `amount`, `sort`, `note`) VALUES ('{$_SESSION['id']}','$date','$period','$heading','$number','$amount','$sort','$note')";
 $pdo->exec($insert_to_invoice);
-to("add_invoice.php?mess=儲存成功");
+to("my_invoice.php?mess=儲存成功");
 ?>

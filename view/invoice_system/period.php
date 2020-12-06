@@ -19,11 +19,7 @@ include_once "main_top.php";
     <a class="btn mr-2 " href="period.php?year=<?=$_COOKIE['year']?>&period=6&period=6&month=11~12月">11~12月</a>
   </div>
 
-  <button type="button" class="btn btn-danger  btn-lg btn-block col-12 mb-2">
-    <i class="fas fa-award h2 m-0 text-white"></i>
-    <a href="Reward.php?period=<?=$_GET['period']?>" class="text-white" style="text-decoration: none;">【一鍵對獎】</a>
-    <i class="fas fa-award h2 m-0 text-white"></i>
-  </button>
+  <button type="button" class="btn btn-primary btn-lg btn-block col-12 mb-2">一鍵對獎</button>
 
   <div class="col-12 container-fluid d-flex justify-content-center mb-2">
     <div class="col-3 border-right ">
@@ -42,32 +38,6 @@ include_once "main_top.php";
       <div class="h6 text-center">中獎金額</div>
       <div class="h3 text-center">$</div>
     </div>
-  </div>
-
-  <div class="col-12 container pl-4 pr-4">
-  <table class="table" cellpadding="5" cellspacing="0">
-    <tr>
-      <td class="h4 radiusl">日期</td>
-      <td class="h4">發票號碼</td>
-      <td class="h4">金額</td>
-      <td class="h4">類別</td>
-      <td class="h4">備註</td>
-      <td class="h4 radiusr" colspan="2">操作</td>
-    </tr>
-    <?php
-    foreach($period_invoice as $key=>$value){
-      echo "<tr>";
-      echo"<td>$value[2]</td>";
-      echo"<td>$value[4]-$value[5]</td>";
-      echo"<td>$$value[6]</td>";
-      echo"<td>$value[7]</td>";
-      echo"<td>$value[8]</td>";
-      echo"<td><a href='edit_invoice.php?id=$value[0]' class='btn btn-sm btn-primary'>編輯</a></td>";
-      echo"<td><a href='delete_confirm.php?id=$value[0]' class='btn btn-sm btn-danger'>刪除</a></td>";
-      echo "</tr>";
-    }
-    ?>
-    </table>
   </div>
 
 

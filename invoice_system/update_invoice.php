@@ -10,5 +10,5 @@ echo $note=$_POST['note'];
 
 $update_invoice="UPDATE `invoice` SET `date`='$date',`period`='$period',`heading`='$heading',`number`='$number',`amount`='$amount',`sort`='$sort',`note`='$note' WHERE `invoice`.`id`='{$_COOKIE['invoice_id']}'";
 $pdo->exec($update_invoice);
-to("my_invoice.php");
+to("my_invoice.php?mess=修改成功");
 ?>

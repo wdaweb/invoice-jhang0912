@@ -136,7 +136,110 @@ i.fas{
   color: rgb(245, 220, 179);
 }
 /* 消費統計 */
-#right a.btn{
+/* 我的發票 */
+a.btn.btn-sm.btn-primary{
+  background-color: rgb(53, 84, 138);
+  }
+.h6.text-center{
+  color: rgb(107, 140, 194);
+}
+.h3.text-center{
+  color: rgb(107, 140, 194);
+}
+a.btn.mr-2{
   background-color: rgb(53, 84, 138);
   color: rgb(245, 220, 179);
+}
+/* 表格 */
+table td{
+  text-align: center;
+}
+td.h4{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+}
+td.h4.radiusl{
+  border-radius: 10px 0 0 0;
+}
+td.h4.radiusr{
+  border-radius: 0 10px 0 0;
+}
+td{
+  color: rgb(88, 88, 88);
+}
+table tr:hover{
+background-color:rgb(250, 243, 232) ;
+}
+/* 發票編輯 */
+a.btn.mr-1{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+}
+/* 發票對獎(錯誤訊息) */
+i.fas.fa-exclamation-triangle.m-0.h1.mr-2.text-white{
+  font-size: 3rem;
+}
+.error.h2.text-white.m-0{
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+}
+/* 發票對獎(對獎功能) */
+.h5.text-left.mb-3{
+  color: rgb(53, 84, 138);
+}
+/* 消費統計 */
+
+.food{
+  background-color: royalblue;
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.home{
+  background-color: rgb(245, 220, 179);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.traffic{
+  background-color: rgb(209, 245, 179);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.communication{
+  background-color: rgb(163, 231, 211);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.entertainment{
+  background-color: rgb(200, 163, 231);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.learn{
+  background-color: rgb(228, 102, 144);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.Favor{
+  background-color: rgb(253, 227, 140);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.Medical{
+  background-color: rgb(231, 163, 211);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.financial{
+  background-color: rgb(72, 207, 117);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+.other{
+  background-color: rgb(111, 183, 241);
+  height: 1.5rem;
+  border-radius: 3px;
+}
+/* 開獎號碼登入 */
+.text-secondary.col-6{
+  margin: 0 auto;
 }
