@@ -12,7 +12,7 @@
     .text-secondary.h3{
       font-family: 'Fredoka One', cursive;
     }
-    input.w-100.btn{
+    button.btn.btn-primary.btn-lg.btn-block{
       background-color: rgb(53, 84, 138);
       color: rgb(245, 220, 179);
     }
@@ -38,27 +38,24 @@
       <div class="pl-3 h3 m-0">歡迎登入</div>
       </div>
       <div class="top2 container col-12 p-4">
-        <form action="login_checked.php" method="post">
-          <div>
-            <?php 
-              if(isset($_GET['login_error']))
-              {echo "<div class='text-danger text-center h6'>",$_GET['login_error'],"</div>";}
-            ?>
+        <form>
+          <div><?php if(isset($_GET['login_error'])){echo $_GET['login_error'];}?>
           </div>
           <div class="form-group">
             <div class="text-secondary h3">Account</div>
-            <input type="text" class="form-control mb-4" name="acc" placeholder="請輸入帳號" value="<?php include_once "../PDO.php";if(isset($_SESSION['acc'])){echo$_SESSION['acc'];}?>" required>
+            <input type="text" class="form-control mb-4" name="acc"  placeholder="請輸入帳號" required>
           </div>
           <div class="form-group">
             <div class="text-secondary h3">Password</div>
-            <input type="text" class="form-control mb-4" name="pass" placeholder="請輸入密碼" required>
+            <input type="password" class="form-control mb-4"         id="exampleInputPassword1" placeholder="請輸入密碼" required>
           </div>
           <div class="form-group form-check mb-4">
             <input type="checkbox" class="form-check-input mb-4" name="session" value="true" checked><span class="h5 text-secondary">記住用戶帳號</span>
 
             <a href="add_member.php" class="float-right " style="text-decoration: none;">立即註冊</a>
           </div>
-            <input type="submit" class="w-100 btn"  value="立即登入">
+          <button type="button" class="btn btn-primary btn-lg btn-block">立即登入
+          </button>
         </form>
     </div>
 

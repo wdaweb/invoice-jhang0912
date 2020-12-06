@@ -1,18 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h2>修改密碼</h2>
-  <h4><?php if(isset($_GET['update'])){echo $_GET['update'];}?></h4>
-  <form action="update.php" method="post">
-    舊密碼<input type="password" name="pass" required>
-    新密碼<input type="password" name="new_pass" required>
-    <input type="submit" value="確認修改">
-  </form>
-  <a href="member_data.php">上一頁</a>  
-</body>
-</html>
+<?php
+include_once "main_top.php";
+?>
+<section id="right" class="col-12 col-sm-12 col-md-9 p-0">
+  <div class="col-12 h3 d-flex align-items-center">
+    <div>修改密碼</div>
+  </div>
+  <div class="text-center text-danger mb-2"><?php if(isset($_GET['update'])){echo $_GET['update'];}?></div>
+  <div class="container">
+    <form action="update.php" method="post">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">舊密碼:</th>
+            <td>
+              <input type="text" name="pass" required>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-center">新密碼:</th>
+            <td>
+              <input type="text" name="new_pass" required>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="d-flex justify-content-center">
+                <input type="submit" class="btn" style="text-decoration: none;" value="確認修改">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</section>
+<?php
+include_once "main_bottom.php";
+?>

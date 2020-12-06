@@ -87,9 +87,6 @@ i.fas.fa-user.h3.m-0{
   height: 3rem;
   margin-top: 0.3rem;
 }
-i.fas.fa-sign-in-alt.h3.m-0{
-  color: rgb(245, 220, 179);
-}
 i.fas{
   color: rgb(53, 84, 138);
   
@@ -114,7 +111,6 @@ i.fas{
   background-color:white;
   border-radius: 5px;
   min-width: 73vw;
-  height: 44rem;
   margin: 0 auto;
 }
 /* 會員主頁 */
@@ -136,6 +132,11 @@ i.fas{
   color: rgb(255, 255, 255);
 }
 #right input.btn{
+  background-color: rgb(53, 84, 138);
+  color: rgb(245, 220, 179);
+}
+/* 消費統計 */
+#right a.btn{
   background-color: rgb(53, 84, 138);
   color: rgb(245, 220, 179);
 }
